@@ -10,20 +10,21 @@ package tb;
  *
  * @author putri
  */
+import java.util.Scanner;
 public class Input {
  // deklarasi variabel identitas ruangkelas
     private String namaruang;
     private String lokasiruang;
     private String fakultas;
     
-    //deklarasi variabel kondisi ruangkelas
+//deklarasi variabel kondisi ruangkelas
     private int panjang;
     private int lebar;
     private int Jumlahkursi;
     private int jumlahpintu;
     private int jumlahjendela;
     
-    //deklarasi variabel jumlah kondisi dan posisi sarana
+//deklarasi variabel jumlah kondisi dan posisi sarana
     private int jumlahstopkontak;
     private String kondisistopkontak;
     private String posisistopkontak;
@@ -51,27 +52,27 @@ public class Input {
     private String kondisiCCTV;
     private String posisiCCTV;
     
-    //deklarasi variabel lingkungan ruangkelas
+//deklarasi variabel lingkungan ruangkelas
     private String kondisilantai;
     private String kondisidinding;
     private String kondisiatap;
     private String kondisipintu;
     private String kondisijendela;
     
-    //deklarasi variabel kebersihan ruangkelas
+//deklarasi variabel kebersihan ruangkelas
     private String inputsirkulasiudara;
     private int pencahayaan;
     private int kelembapan;
     private int suhu;
     
-    //deklarasi variabel kenyamanan ruangkelas
+//deklarasi variabel kenyamanan ruangkelas
     private String kebisingan;
     private String bau;
     private String kebocaran;
     private String kerusakan;
     private String keausan;
     
-    //deklarasi variabel keamanan ruangkelas
+//deklarasi variabel keamanan ruangkelas
     private String kekokohan;
     private String kuncipintudanjendela;
     private String bahaya;
@@ -79,399 +80,117 @@ public class Input {
     private double luas;
     private double rasio;
     private double bentuk;
-    
-    double hitungluas(){
-        luas=this.panjang*this.lebar;
-        return luas;
-    }
-    double hitungrasio(){
-        rasio=luas/Jumlahkursi;
-        if (rasio>=0.5){
-            System.out.println("Sesuai");
-        }
-        else {
-            System.out.println("Tidak sesuai");
-        }
-        return rasio;
+      
+public void insert (){
+    Scanner in = new Scanner (System.in);
+    // inputan identitas ruang kelas
+        System.out.println("Masukkan nama ruang :");
+        this.namaruang=in.next();
+        System.out.println("Masukkan lokasi ruang :");
+        this.lokasiruang=in.next();
+         System.out.println("Masukkan fakultas :");
+        this.fakultas=in.next();
         
-    }
-    double hitungbentuk(){
-        bentuk=this.panjang*this.lebar;
-        if (panjang!=luas){
-            System.out.println("Sesuai");
-        }
-        else {
-            System.out.println("Tidak sesuai");
-        }
-        return luas;
+    // inputan kondisi ruang kelas
+        System.out.println("Masukkan panjang ruang :");
+        this.panjang=in.nextInt();
+        System.out.println("Masukkan lebar ruang :");
+        this.lebar=in.nextInt();
+        System.out.println("Masukkan jumlah kursi :");
+        this.Jumlahkursi=in.nextInt();
+        System.out.println("Masukkan jumlah pintu :");
+        this.jumlahpintu=in.nextInt();
+        System.out.println("Masukkan jumlah jendela :");
+        this.jumlahjendela=in.nextInt();
         
+    // inputan jumlah,kondisi,posisi sarana
+        System.out.println("Masukkan jumlah stopkontak :");
+        this.jumlahstopkontak=in.nextInt();
+        System.out.println("Masukkan kondisi stopkontak :");
+        this.kondisistopkontak=in.next();
+        System.out.println("Masukkan posisi stopkontak:");
+        this.posisistopkontak=in.next();
         
-    }
-
-    public String getNamaruang() {
-        return namaruang;
-    }
-
-    public void setNamaruang(String namaruang) {
-        this.namaruang = namaruang;
-    }
-
-    public String getLokasiruang() {
-        return lokasiruang;
-    }
-
-    public void setLokasiruang(String lokasiruang) {
-        this.lokasiruang = lokasiruang;
-    }
-
-    public String getFakultas() {
-        return fakultas;
-    }
-
-    public void setFakultas(String fakultas) {
-        this.fakultas = fakultas;
-    }
-
-    public int getPanjang() {
-        return panjang;
-    }
-
-    public void setPanjang(int panjang) {
-        this.panjang = panjang;
-    }
-
-    public int getLebar() {
-        return lebar;
-    }
-
-    public void setLebar(int lebar) {
-        this.lebar = lebar;
-    }
-
-    public int getJumlahkursi() {
-        return Jumlahkursi;
-    }
-
-    public void setJumlahkursi(int Jumlahkursi) {
-        this.Jumlahkursi = Jumlahkursi;
-    }
-
-    public int getJumlahpintu() {
-        return jumlahpintu;
-    }
-
-    public void setJumlahpintu(int jumlahpintu) {
-        this.jumlahpintu = jumlahpintu;
-    }
-
-    public int getJumlahjendela() {
-        return jumlahjendela;
-    }
-
-    public void setJumlahjendela(int jumlahjendela) {
-        this.jumlahjendela = jumlahjendela;
-    }
-
-    public int getJumlahstopkontak() {
-        return jumlahstopkontak;
-    }
-
-    public void setJumlahstopkontak(int jumlahstopkontak) {
-        this.jumlahstopkontak = jumlahstopkontak;
-    }
-
-    public String getKondisistopkontak() {
-        return kondisistopkontak;
-    }
-
-    public void setKondisistopkontak(String kondisistopkontak) {
-        this.kondisistopkontak = kondisistopkontak;
-    }
-
-    public String getPosisistopkontak() {
-        return posisistopkontak;
-    }
-
-    public void setPosisistopkontak(String posisistopkontak) {
-        this.posisistopkontak = posisistopkontak;
-    }
-
-    public int getJumlahkabellcd() {
-        return jumlahkabellcd;
-    }
-
-    public void setJumlahkabellcd(int jumlahkabellcd) {
-        this.jumlahkabellcd = jumlahkabellcd;
-    }
-
-    public String getKondisikabellcd() {
-        return kondisikabellcd;
-    }
-
-    public void setKondisikabellcd(String kondisikabellcd) {
-        this.kondisikabellcd = kondisikabellcd;
-    }
-
-    public String getPosisikabellcd() {
-        return posisikabellcd;
-    }
-
-    public void setPosisikabellcd(String posisikabellcd) {
-        this.posisikabellcd = posisikabellcd;
-    }
-
-    public int getJumlahlampu() {
-        return jumlahlampu;
-    }
-
-    public void setJumlahlampu(int jumlahlampu) {
-        this.jumlahlampu = jumlahlampu;
-    }
-
-    public String getKondisilampu() {
-        return kondisilampu;
-    }
-
-    public void setKondisilampu(String kondisilampu) {
-        this.kondisilampu = kondisilampu;
-    }
-
-    public String getPosisilampu() {
-        return posisilampu;
-    }
-
-    public void setPosisilampu(String posisilampu) {
-        this.posisilampu = posisilampu;
-    }
-
-    public int getJumlahkipasangin() {
-        return jumlahkipasangin;
-    }
-
-    public void setJumlahkipasangin(int jumlahkipasangin) {
-        this.jumlahkipasangin = jumlahkipasangin;
-    }
-
-    public String getKondisikipasangin() {
-        return kondisikipasangin;
-    }
-
-    public void setKondisikipasangin(String kondisikipasangin) {
-        this.kondisikipasangin = kondisikipasangin;
-    }
-
-    public String getPosisikipasangin() {
-        return posisikipasangin;
-    }
-
-    public void setPosisikipasangin(String posisikipasangin) {
-        this.posisikipasangin = posisikipasangin;
-    }
-
-    public int getJumlahAC() {
-        return jumlahAC;
-    }
-
-    public void setJumlahAC(int jumlahAC) {
-        this.jumlahAC = jumlahAC;
-    }
-
-    public String getKondisiAC() {
-        return kondisiAC;
-    }
-
-    public void setKondisiAC(String kondisiAC) {
-        this.kondisiAC = kondisiAC;
-    }
-
-    public String getPosisiAC() {
-        return posisiAC;
-    }
-
-    public void setPosisiAC(String posisiAC) {
-        this.posisiAC = posisiAC;
-    }
-
-    public String getPilihSSID() {
-        return pilihSSID;
-    }
-
-    public void setPilihSSID(String pilihSSID) {
-        this.pilihSSID = pilihSSID;
-    }
-
-    public int getBandwidth() {
-        return bandwidth;
-    }
-
-    public void setBandwidth(int bandwidth) {
-        this.bandwidth = bandwidth;
-    }
-
-    public int getJumlahCCTV() {
-        return jumlahCCTV;
-    }
-
-    public void setJumlahCCTV(int jumlahCCTV) {
-        this.jumlahCCTV = jumlahCCTV;
-    }
-
-    public String getKondisiCCTV() {
-        return kondisiCCTV;
-    }
-
-    public void setKondisiCCTV(String kondisiCCTV) {
-        this.kondisiCCTV = kondisiCCTV;
-    }
-
-    public String getPosisiCCTV() {
-        return posisiCCTV;
-    }
-
-    public void setPosisiCCTV(String posisiCCTV) {
-        this.posisiCCTV = posisiCCTV;
-    }
-
-    public String getKondisilantai() {
-        return kondisilantai;
-    }
-
-    public void setKondisilantai(String kondisilantai) {
-        this.kondisilantai = kondisilantai;
-    }
-
-    public String getKondisidinding() {
-        return kondisidinding;
-    }
-
-    public void setKondisidinding(String kondisidinding) {
-        this.kondisidinding = kondisidinding;
-    }
-
-    public String getKondisiatap() {
-        return kondisiatap;
-    }
-
-    public void setKondisiatap(String kondisiatap) {
-        this.kondisiatap = kondisiatap;
-    }
-
-    public String getKondisipintu() {
-        return kondisipintu;
-    }
-
-    public void setKondisipintu(String kondisipintu) {
-        this.kondisipintu = kondisipintu;
-    }
-
-    public String getKondisijendela() {
-        return kondisijendela;
-    }
-
-    public void setKondisijendela(String kondisijendela) {
-        this.kondisijendela = kondisijendela;
-    }
-
-    public String getInputsirkulasiudara() {
-        return inputsirkulasiudara;
-    }
-
-    public void setInputsirkulasiudara(String inputsirkulasiudara) {
-        this.inputsirkulasiudara = inputsirkulasiudara;
-    }
-
-    public int getPencahayaan() {
-        return pencahayaan;
-    }
-
-    public void setPencahayaan(int pencahayaan) {
-        this.pencahayaan = pencahayaan;
-    }
-
-    public int getKelembapan() {
-        return kelembapan;
-    }
-
-    public void setKelembapan(int kelembapan) {
-        this.kelembapan = kelembapan;
-    }
-
-    public int getSuhu() {
-        return suhu;
-    }
-
-    public void setSuhu(int suhu) {
-        this.suhu = suhu;
-    }
-
-    public String getKebisingan() {
-        return kebisingan;
-    }
-
-    public void setKebisingan(String kebisingan) {
-        this.kebisingan = kebisingan;
-    }
-
-    public String getBau() {
-        return bau;
-    }
-
-    public void setBau(String bau) {
-        this.bau = bau;
-    }
-
-    public String getKebocaran() {
-        return kebocaran;
-    }
-
-    public void setKebocaran(String kebocaran) {
-        this.kebocaran = kebocaran;
-    }
-
-    public String getKerusakan() {
-        return kerusakan;
-    }
-
-    public void setKerusakan(String kerusakan) {
-        this.kerusakan = kerusakan;
-    }
-
-    public String getKeausan() {
-        return keausan;
-    }
-
-    public void setKeausan(String keausan) {
-        this.keausan = keausan;
-    }
-
-    public String getKekokohan() {
-        return kekokohan;
-    }
-
-    public void setKekokohan(String kekokohan) {
-        this.kekokohan = kekokohan;
-    }
-
-    public String getKuncipintudanjendela() {
-        return kuncipintudanjendela;
-    }
-
-    public void setKuncipintudanjendela(String kuncipintudanjendela) {
-        this.kuncipintudanjendela = kuncipintudanjendela;
-    }
-
-    public String getBahaya() {
-        return bahaya;
-    }
-
-    public void setBahaya(String bahaya) {
-        this.bahaya = bahaya;
-    }
+        System.out.println("Masukkan jumlah kabellcd :");
+        this.jumlahkabellcd=in.nextInt();
+        System.out.println("Masukkan kondisi kabellcd:");
+        this.kondisikabellcd=in.next();
+        System.out.println("Masukkan posisi kabellcd:");
+        this.posisikabellcd=in.next();
+        
+        System.out.println("Masukkan jumlah lampu :");
+        this.jumlahlampu=in.nextInt();
+        System.out.println("Masukkan kondisi lampu:");
+        this.kondisilampu=in.next();
+        System.out.println("Masukkan posisi lampu:");
+        this.posisilampu=in.next();
+        
+        System.out.println("Masukkan jumlah kipasangin :");
+        this.jumlahkipasangin=in.nextInt();
+        System.out.println("Masukkan kondisi :");
+        this.kondisikipasangin=in.next();
+        System.out.println("Masukkan posisi :");
+        this.posisikipasangin=in.next();
+        
+        System.out.println("Masukkan jumlah AC:");
+        this.jumlahAC=in.nextInt();
+        System.out.println("Masukkan kondisi AC:");
+        this.kondisiAC=in.next();
+        System.out.println("Masukkan posisi AC:");
+        this.posisiAC=in.next();
+        
+        System.out.println("Masukkan SSID:");
+        this.pilihSSID=in.next();
+        System.out.println("Masukkan bandwidth :");
+        this.bandwidth=in.nextInt();
+        
+        System.out.println("Masukkan jumlah CCTV:");
+        this.jumlahCCTV=in.nextInt();
+        System.out.println("Masukkan kondisi CCTV:");
+        this.kondisiCCTV=in.next();
+        System.out.println("Masukkan posisi CCTV:");
+        this.posisiCCTV=in.next();
+        
+    //inputan  lingkungan ruang kelas     
+        System.out.println("Masukkan kondisi lantai:");
+        this.kondisilantai=in.next();
+        System.out.println("Masukkan kondisi dinding:");
+        this.kondisidinding=in.next();
+        System.out.println("Masukkan kondisi atap:");
+        this.kondisiatap=in.next();
+        System.out.println("Masukkan kondisi pintu:");
+        this.kondisipintu=in.next();
+        System.out.println("Masukkan kondisi jendela:");
+        this.kondisijendela=in.next();
+        
+    //inputan kebersihan ruang kelas
+        System.out.println("Masukkan kondisi sirkulasiudara:");
+        this.inputsirkulasiudara=in.next();
+        System.out.println("Masukkan pencahayaan :");
+        this.pencahayaan=in.nextInt();
+        System.out.println("Masukkan kelembapan :");
+        this.kelembapan=in.nextInt();
+        System.out.println("Masukkan suhu :");
+        this.suhu=in.nextInt();
+        
+    //inputan  kenyamanan ruangkelas    
+        System.out.println("Masukkan kebisingan :");
+        this.kebisingan=in.next();
+        System.out.println("Masukkan bau :");
+        this.bau=in.next();
+        System.out.println("Masukkan kebocoran :");
+        this.kebocaran=in.next();
+        System.out.println("Masukkan kerusakan :");
+        this.kerusakan=in.next();
+        System.out.println("Masukkan keausan :");
+        this.keausan=in.next();
     
-       
- }
-  
-   
-   
-    
-
+    //inputan keamanan ruangkelas    
+        System.out.println("Masukkan kekokohan :");
+        this.kekokohan=in.next();
+        System.out.println("Masukkan kuncipintudankelas :");
+        this.kuncipintudanjendela=in.next();
+        System.out.println("Masukkan bahaya :");
+        this.bahaya=in.next();
+    }
+   }
